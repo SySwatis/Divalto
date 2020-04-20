@@ -1,0 +1,19 @@
+{
+  "name": "divalto/extraprice",
+  "description": "This module displays extra price",
+  "require": {
+    "divalto/extraprice": "",
+    "magento/framework": "^100.0.0|^101.0.0|^102.0.0",
+    "divalto/dashboard": "^1.0"
+  },
+  "type": "magento2-module",
+  "license": "OSL-3.0",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Divalto\\ExtraPrice\\": "src"
+    }
+  }
+}

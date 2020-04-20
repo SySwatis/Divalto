@@ -1,0 +1,5 @@
+<?php if ($block->isEnabled()): ?> 
+    <div class="extraprice-container">
+        <span class="label"><?= __('Unit Price') ?> : </span><span class="extraprice"><?php echo $block->getExtraPriceText() ?></span>
+    </div>
+<?php endif ?>

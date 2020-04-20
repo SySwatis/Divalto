@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Divalto
+ * @package    Divalto_ExtraPrice
+ * @subpackage etc
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Pricing\Render">
+        <plugin name="divalto_extraprice_priceRender" type="Divalto\ExtraPrice\Model\Plugin\AfterPrice" />
+    </type>
+    <type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin name="divalto_extraprice_configurablePriceRender" type="Divalto\ExtraPrice\Model\Plugin\ConfigurablePrice" />
+    </type>
+ <!-- <preference for="Magento\GroupedProduct\Model\Product\Type\Grouped" type="Divalto\ExtraPrice\Model\Plugin\Grouped"/> -->
+</config>
