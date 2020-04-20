@@ -1,4 +1,10 @@
 <?php
+/**
+ * @category   Divalto
+ * @package    Divalto_ExtraPrice
+ * @subpackage Setup
+ */
+namespace Divalto\ExtraPrice\Block;
 
 namespace Divalto\ExtraPrice\Setup;
 
