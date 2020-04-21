@@ -1,6 +1,6 @@
 {
   "name": "divalto/extraprice",
-  "version":"1.0.*",
+  "minimum-stability": "dev",
   "description": "This module displays extra price",
   "require": {
     "magento/framework": "*"
