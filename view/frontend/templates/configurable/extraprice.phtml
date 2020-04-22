@@ -9,9 +9,9 @@
  * @var $block \Divalto\ExtraPrice\Block\AfterPrice
  */
 ?>
-<?php //if ($block->isEnabled()): ?>
+<?php if ($block->isEnabled()): ?>
     <div class="extraprice-container">
-        <span class="label"><?= __('Unit Price') ?> : </span><span class="extraprice"><?php echo $block->getExtraPriceText() ?></span><span><?= __($block->getDisplayExtraPriceTax()) ?></span>
+        <span class="label"><?= __('Unit Price') ?> : </span><span class="extraprice"><?= $block->getExtraPriceText() ?></span><span><?= __($block->getDisplayExtraPriceTax()) ?></span>
     </div>
     <script type="text/javascript">
         require(['jquery', 'jquery/ui', 'domReady!'], function($) {
@@ -49,4 +49,4 @@
             });
         });
     </script>
-<?php //endif; ?>
+<?php endif; ?>

@@ -4,9 +4,7 @@
  * @package    Divalto_ExtraPrice
  * @subpackage Setup
  */
-
 namespace Divalto\ExtraPrice\Setup;
-
 
 use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
@@ -14,9 +12,11 @@ use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
-
+/**
+ * Class InstallData
+ * @package Divalto\ExtraPrice\Setup
+ */
 class InstallData implements InstallDataInterface
-
 {
    private $eavSetupFactory;
 

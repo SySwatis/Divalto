@@ -112,7 +112,7 @@ class Data extends AbstractHelper
      * @return string
      */
     public function getRoundPrecision() {
-        return !empty($this->_helper->getGeneralConfig('round_precision')) ? $this->_helper->getGeneralConfig('round_precision') : PriceCurrencyInterface::DEFAULT_PRECISION;
+        return !empty($this->getGeneralConfig('round_precision')) ? $this->getGeneralConfig('round_precision') : PriceCurrencyInterface::DEFAULT_PRECISION;
     }
 
     /**

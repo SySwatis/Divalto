@@ -1,5 +1,16 @@
+<?php
+/**
+ * @category   Divalto
+ * @package    Divalto_extraprice
+ * @subpackage view
+ */
+
+/**
+ * @var $block \Divalto\ExtraPrice\Block\AfterPrice
+ */
+?>
 <?php if ($block->isEnabled()): ?> 
     <div class="extraprice-container">
-        <span class="label"><?= __('Unit Price') ?> : </span><span class="extraprice"><?php echo $block->getExtraPriceText() ?></span>
+        <span class="label"><?= __('Unit Price') ?> : </span><span class="extraprice"><?= $block->getExtraPriceText() ?></span><span><?= __($block->getDisplayExtraPriceTax()) ?></span>
     </div>
 <?php endif ?>
