@@ -84,7 +84,6 @@ class Data extends AbstractHelper
         return $ExtraPrice;
     }
 
-
     public function getConfigValue($field, $storeId = null)
     {
         return $this->scopeConfig->getValue(
@@ -98,8 +97,8 @@ class Data extends AbstractHelper
         return $this->getConfigValue(self::XML_PATH_EXTRAPRICE .'general/'. $code, $storeId);
     }
 
-
-    public function displayPriceIncludingTax() {
+    public function displayPriceIncludingTax() 
+    {
          return $this->taxHelper->displayPriceIncludingTax();
 
     }
