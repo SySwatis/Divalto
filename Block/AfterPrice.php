@@ -56,10 +56,13 @@ class AfterPrice extends \Magento\Framework\View\Element\Template
     {
         $moduleEnabled = $this->_helper->getGeneralConfig('enabled');
 
-        $productAmount = $this->_helper->getGeneralConfig('attribute_code')?? $this->getProduct()->getData('extraprice_product_amount');
+        $attributeCode = $this->_helper->getGeneralConfig('attribute_code') ?? 'extra_price_unit_amount';
+
+        $productAmount = $this->getProduct()->getData($attributeCode);
 
         return $moduleEnabled && !empty($productAmount);
     }
+
 
 	/**
 	 * Retrieve current product

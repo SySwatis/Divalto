@@ -76,7 +76,8 @@ class Data extends AbstractHelper
             $productPrice = round($product->getPriceInfo()->getPrice('final_price')->getAmount()->getBaseAmount(),$this->getRoundPrecision());
         }
 
-        $extraPriceProductUnit = $product->getData('extra_price_unit_amount') ?? 1;
+        $attributeCode = !empty($this->getGeneralConfig('attribute_code')) ? $this->getGeneralConfig('attribute_code') : 'extra_price_unit_amount';
+        $extraPriceProductUnit = $product->getData($attributeCode) ?? 1;
 
         $ExtraPrice = $productPrice / $extraPriceProductUnit;
 
