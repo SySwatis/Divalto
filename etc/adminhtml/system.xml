@@ -21,6 +21,14 @@
                     <label>Enable module</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="attribute_code" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom attribute code</label>
+                    <comment>Leave empty for using this default product attribute code : "extra_price_unit_amount".</comment>
+                </field>
+                <field id="round_precision" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Round precision</label>
+                    <comment>Leave empty for using default precision.</comment>
+                </field>
             </group>
         </section>
     </system>

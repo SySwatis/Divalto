@@ -39,27 +39,27 @@ class InstallData implements InstallDataInterface
        $eavSetup->addAttribute(
            \Magento\Catalog\Model\Product::ENTITY,
            'extra_price_unit_amount',
-           [
-               'group' => 'General',
+            [
+                'group' => 'General',
                 'attribute_set_id' => 'Default',
-               'type' => 'decimal',
-               'backend' => '',
-               'frontend' => '',
-               'label' => 'Extra Price Unit Amount',
-               'input' => 'text',
-               'class' => '',
-               'source' => '',
-               'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
-               'visible' => true,
-               'required' => false,
-               'user_defined' => true,
-               'default' => 0,
-               'searchable' => false,
-               'filterable' => false,
-               'comparable' => false,
-               'visible_on_front' => true,
-               'sort_order' => 101
-           ]
+                'type' => 'decimal',
+                'backend' => '',
+                'frontend' => '',
+                'label' => 'Extra Price Unit Amount',
+                'input' => 'text',
+                'class' => '',
+                'source' => '',
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'visible' => true,
+                'required' => false,
+                'user_defined' => true,
+                'default' => 0,
+                'searchable' => false,
+                'filterable' => false,
+                'comparable' => false,
+                'visible_on_front' => true,
+                'sort_order' => 101
+            ]
        );
 
    }

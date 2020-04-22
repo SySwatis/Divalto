@@ -39,7 +39,6 @@ class Data extends AbstractHelper
      * @param Context $context
      * @param PriceHelper $priceHelper
      */
-
     public function __construct(
         Context $context,
         PriceHelper $priceHelper,
@@ -72,9 +71,9 @@ class Data extends AbstractHelper
     public function getExtraPrice(Product $product, $taxInc = false)
     {
         if($taxInc) {
-            $productPrice = round($product->getPriceInfo()->getPrice('final_price')->getAmount()->getValue(), PriceCurrencyInterface::DEFAULT_PRECISION);
+            $productPrice = round($product->getPriceInfo()->getPrice('final_price')->getAmount()->getValue(),$this->getRoundPrecision());
         } else {
-            $productPrice = round($product->getPriceInfo()->getPrice('final_price')->getAmount()->getBaseAmount(), PriceCurrencyInterface::DEFAULT_PRECISION);
+            $productPrice = round($product->getPriceInfo()->getPrice('final_price')->getAmount()->getBaseAmount(),$this->getRoundPrecision());
         }
 
         $extraPriceProductUnit = $product->getData('extra_price_unit_amount') ?? 1;
@@ -84,6 +83,11 @@ class Data extends AbstractHelper
         return $ExtraPrice;
     }
 
+    /**
+     * Returns config value
+     *
+     * @return string
+     */
     public function getConfigValue($field, $storeId = null)
     {
         return $this->scopeConfig->getValue(
@@ -91,12 +95,31 @@ class Data extends AbstractHelper
         );
     }
 
+    /**
+     * Returns general config value
+     *
+     * @return string
+     */
     public function getGeneralConfig($code, $storeId = null)
     {
 
         return $this->getConfigValue(self::XML_PATH_EXTRAPRICE .'general/'. $code, $storeId);
     }
 
+    /**
+     * Returns the extra price round precision
+     *
+     * @return string
+     */
+    public function getRoundPrecision() {
+        return !empty($this->_helper->getGeneralConfig('round_precision')) ? $this->_helper->getGeneralConfig('round_precision') : PriceCurrencyInterface::DEFAULT_PRECISION;
+    }
+
+    /**
+     * Returns display price including tax
+     *
+     * @return bolean
+     */
     public function displayPriceIncludingTax() 
     {
          return $this->taxHelper->displayPriceIncludingTax();
