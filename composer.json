@@ -4,6 +4,12 @@
   "description": "This module displays extra price",
   "type": "magento2-module",
   "license": "OSL-3.0",
+  "authors": [
+    {
+        "email": "syswatis@gmail.com",
+        "name": "Stéphane JIMENEZ"
+    }
+  ],
   "autoload": {
     "files": [
       "registration.php"
